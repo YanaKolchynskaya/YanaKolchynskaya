@@ -1,0 +1,48 @@
+#Task 1
+
+#1.1
+l = [1, 4, 6, 7, 2, 1, 7, 8, 9, 5, 7, 3, 6, 2, 7, 43, 54, 13]
+print ('Maximum =', str(max(l))+', its index -', str(l.index(max(l)))+';', 
+ '\n    minimum =', str(min(l))+', its index -', str(l.index(min(l)))+'.')
+
+#1.2
+import collections
+a = collections.Counter([1, 4, 6, 7, 2, 1, 7, 8, 9, 5, 7, 3, 6, 2, 7, 43, 54, 13])
+print ('Modes are:', a.most_common(3))
+
+#1.3.1
+#l = [1, 4, 6, 7, 2, 1, 7, 8, 9, 5, 7, 3, 6, 2, 7, 43, 54, 13]
+#print ('List without the same order:', set(l))
+
+#1.3.2
+a = [1, 4, 6, 7, 2, 1, 7, 8, 9, 5, 7, 3, 6, 2, 7, 43, 54, 13]
+b = []
+for x in (a):
+    if x not in b:
+        b.append(x)
+print ('List with the same order:', b)
+
+
+
+#Task 2
+
+#2.1
+a = {'a': 1, 'b': 4, 't': 67}
+b = {'c': 4, 'e': 1, 'a': 4, 't': 7, 'y': 11}
+print ('Keys in both dictionaries are:', a.keys()&b.keys())
+
+#2.2
+a = {'a': 1, 'b': 4, 't': 67}
+b = {'c': 4, 'e': 1, 'a': 4, 't': 7, 'y': 11}
+print ('Keys in 2nd dictionary without 1st are:', b.keys()-a.keys())
+
+#2.3
+a = {'a': 1, 'b': 4, 't': 67}
+b = {'c': 4, 'e': 1, 'a': 4, 't': 7, 'y': 11}
+c = [a, b]
+x = {}
+
+for i in c:
+    for j in i.keys():
+        x[j] = x.get(j,0) + i[j]
+print ('Union and addition of dictionaries are:', x)
