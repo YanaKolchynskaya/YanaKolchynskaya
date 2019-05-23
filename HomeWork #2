@@ -1,16 +1,16 @@
 #Task 1
 import collections
 a = collections.Counter('spam and eggs or eggs with spam')
-print (a)
+print ('Each symbol occurs:', a)
 
 #Task 2
 
 #Task 3
 s = str(input())
 if s[::1] == s[::-1]:
-   print ('Строка', s, 'является палиндромом.')
+   print ('String', s, 'is a palindrome.')
 else:
-   print ('Строка', s, 'не является палиндромом.')
+   print ('String', s, 'is not a palindrome.')
 
 #Task 5
 import random
