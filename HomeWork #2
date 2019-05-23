@@ -3,8 +3,6 @@ import collections
 a = collections.Counter('spam and eggs or eggs with spam')
 print ('Each symbol occurs:', a)
 
-#Task 2
-
 #Task 3
 s = str(input())
 if s[::1] == s[::-1]:
