@@ -1,0 +1,50 @@
+#Task 1
+def swap1(m, i, j):
+    
+    c = 0
+    c = m[i]
+    m[i] = m[j]
+    m[j] = c
+    print (m)
+
+#Task 2?
+s = str(input())
+if s[::1] == s[::-1]:
+   print ('String', s, 'is a palindrome.')
+else:
+   print ('String', s, 'is not a palindrome.')
+
+#Task 3
+def password(s):
+    
+    a = 'abcdefghijklmnopqrstuvwxyz'
+    l = list (a)
+    n = []
+    m = []
+    o = []
+    for i in range (len(s)):
+        if s[i].isdigit():
+            n.append(s[i])
+        else:
+            m.append(s[i])
+        if s[i] in a:
+            o.append(s[i])            
+    if (len(s)>4)&(len(m)==len(o))&(len(n)%2==0)&(len(m)%2!=0):
+        print('Your password is valid.')
+    else:
+        print ('Your password is not valid.')
+
+#Task 4
+autos = [
+  {"brand": "Ford", "model": "Mustang", "year": 1964, "price": 4000},
+  {"brand": "Ford", "model": "Mondeo", "year": 1999, "price": 3000},
+  {"brand": "Ford", "model": "Fiesta", "year": 2003, "price": 4200},
+  {"brand": "Nissan", "model": "Primera", "year": 1997, "price": 3100},
+  {"brand": "BMW", "model": "X3", "year": 2001, "price": 5000},
+  {"brand": "Nissan", "model": None, "year": 1964, "price": None},
+  {"brand": "VW", "model": "Passat", "year": 1996, "price": 1200},
+  {"brand": "BMW", "model": "X5", "year": 2010, "price": 7500},
+  {"brand": "Renault", "model": "Megane", "year": 1999, "price": 2300}
+]
+autos.sort(key= lambda x: (x['price'] is not None, x['price']), reverse=True)
+print(autos)
