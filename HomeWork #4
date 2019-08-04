@@ -2,10 +2,12 @@
 def swap1(m, i, j):
     
     c = 0
-    c = m[i]
-    m[i] = m[j]
-    m[j] = c
+    c = m[i-1]
+    m[i-1] = m[j-1]
+    m[j-1] = c
     print (m)
+n = [1, 2, 3, 4, 5]
+swap1(n, 3, 5)
 
 #Task 2?
 s = str(input())
