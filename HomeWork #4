@@ -18,7 +18,6 @@ else:
 
 #Task 3
 def password(s):
-    
     a = 'abcdefghijklmnopqrstuvwxyz'
     l = list (a)
     n = []
@@ -35,6 +34,8 @@ def password(s):
         print('Your password is valid.')
     else:
         print ('Your password is not valid.')
+s = input()
+password(s)
 
 #Task 4
 autos = [
